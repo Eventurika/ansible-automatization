@@ -2,6 +2,6 @@
   vars:
     enable_enginx: false
     configure: false
-    root_pass: "spdlab--"
+    root_pass: "qwerty"
   roles:
     - role: './prj'
