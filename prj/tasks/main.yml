@@ -1,0 +1,7 @@
+---
+- name: Base configure host and install packages
+  when: configure
+  ansible.builtin.import_tasks: base_configure.yml
+
+- name: Start main services
+  ansible.builtin.import_tasks: start_services.yml

@@ -1,0 +1,21 @@
+---
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: /root/project
+    state: directory
+    mode: '0755'
+
+- name: Copy file with owner and permissions
+  ansible.builtin.copy:
+    src: ../files/compose.yaml
+    dest: /root/project/docker-compose.yml
+    mode: '0755'
+
+- name: Start docker compose 
+  community.docker.docker_compose:
+    project_src: /root/project/
+  register: output
+
+- name: Show results
+  ansible.builtin.debug:
+    var: output

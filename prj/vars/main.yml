@@ -1,0 +1,4 @@
+---
+docker_ce_ver: 20.10.23
+containerd_ver: 1.6.14
+docker_cli: v2.7.2

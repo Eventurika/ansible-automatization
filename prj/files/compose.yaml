@@ -1,0 +1,31 @@
+version: "3.6"
+
+services:
+
+  redis:
+    image: redis
+    container_name: rediska
+    restart: always
+    networks:
+      - microservices
+    ports:
+      - 6379:6379
+
+  tgbot:
+    image: serg228/mir:tgbot
+    container_name: tgbot
+    restart: always
+    networks:
+      - microservices
+  
+  dsbot:
+    image: serg228/mir:discord
+    container_name: dsbot
+    restart: always
+    networks:
+      - microservices
+
+networks:
+  microservices:
+    driver: bridge
+
