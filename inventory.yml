@@ -5,4 +5,4 @@ devserv:
     ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
     ansible_ssh_pass: "{{ root_pass }}"
   hosts:
-    proxoxnode: { ansible_host: 192.168.0.26 }
+    proxoxnode: { ansible_host: 192.168.0.89 }
